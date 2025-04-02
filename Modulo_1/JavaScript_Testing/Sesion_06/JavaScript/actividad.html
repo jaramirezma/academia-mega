@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Guardadas</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>
+        Notas Guardadas    
+    </h1>
+    <textarea id="nota"></textarea>
+    <br>
+    <button onclick="guardarNota()">Guardar Notas</button>
+    <button onclick="borrarNotas()">Borrar Todas</button>    
+    <br>
+    <h2>Listas de Notas</h2>
+    <ul id="listaNotas">
+        <li>Ejemplo predefinido</li>
+    </ul>
+    
+    <script>
+
+        //log
+        console.log("Mensaje");
+        //error
+        console.error("Error");
+        //warn
+        console.warn("Advertencia");
+        //table
+        console.table([{nombre: "Javier", edad: 27},{nombre: "Agustiin", edad: 23},{nombre: "Ramirez", edad: 5}]);
+
+        function guardarNota(){
+
+            const texto = document.getElementById("nota").value.trim();
+
+            if(texto === "") return; //Se sale de la funcion
+
+            let notas = JSON.parse(localStorage.getItem("notas")) || [];
+            notas.push(texto);
+
+            localStorage.setItem("notas", JSON.stringify(notas));
+            document.getElementById("nota").value = "";
+            mostrarNotas();
+        }
+
+        function mostrarNotas(){
+            const lista = document.getElementById("listaNotas");
+            lista.innerHTML = "";
+            let notas = JSON.parse(localStorage.getItem("notas")) || [];
+            
+            console.log(notas);
+            notas.forEach((nota, index) => {
+                const li = document.createElement("li");
+                li.innerHTML = `${nota} <span onclick="borrarNota(${index})">X</span>`;
+                lista.appendChild(li);
+            });
+        }
+
+        function borrarNotas(){
+            localStorage.removeItem("notas");
+            mostrarNotas();
+        }
+
+        function borrarNota(index){
+            let notas = JSON.parse(localStorage.getItem("notas")) || [];
+            notas.splice(index, 1);
+            localStorage.setItem("notas",JSON.stringify(notas));
+            mostrarNotas();
+        }
+
+        mostrarNotas();
+    </script>
+</body>
+</html>

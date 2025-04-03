@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+
+        h1{
+            color: #245678;
+        }
+
+        p{ 
+            color: rgb(6, 85, 85);
+        }
+
+        .parrafo{
+            font-size: 30px;
+            background-color: rgb(78, 48, 48);
+            margin: 40;
+            border: 12px solid #03141f;
+            padding: 10px 0px 30px 50px; /*Con 1 datos, aplica a todos los lados 
+                                        | Con 2 datos, aplica a Arriba y Abajo para el primer valor y Derecha e Izquierda para el segundo valor 
+                                        | Con 3 datos, aplica primero a Arriba, segundo Izquierda y DErecha y el 3ro aplica a abajo
+                                        |Con 4 datos:Arriba, Derecha, Abajo, Izquierda*/
+        }
+
+        .bordes{
+            border-radius: 10px;
+        }
+
+        #titulo{
+            font-size: 35px;
+            color: black;
+        }
+
+        .caja{
+            background-color: rgb(93, 93, 124);
+            width: 400px;
+            height: 50px;
+            border-radius:  8px;
+            color: red;
+        }
+    </style>
+</head>
+<body >
+    <h1 style="color: rgb(105, 9, 9);" id="titulo">Titulo</h1> 
+    
+    <p class="parrafo bordes">Este es el contenido de mi página</p>
+    <p class="caja">Pero bievenidos esta es mi página que aun no he terminado</p>
+    <p>Pero... gracias por estar aquí</p>
+
+    <div class="caja">
+
+    </div>
+
+    <script src="./Clase5.js"></script>
+
+</body>
+</html>

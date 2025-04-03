@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Clase de JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            h1{
+                color: #0d143d;
+                font-size: 30px;
+                font-style: italic;
+            }
+
+            p{
+                border: 5px solid #0d143d;
+                border-radius: 10px;
+            }
+
+            form{
+                border: 10px solid #11501c;
+                border-radius: 10px;
+                background-color: #1f5242;
+            }
+
+            .contenido{
+                margin: 50;
+                padding: 30px 20px 30px 10px; /*Con 1 datos, aplica a todos los lados 
+                                        | Con 2 datos, aplica a Arriba y Abajo para el primer valor y Derecha e Izquierda para el segundo valor 
+                                        | Con 3 datos, aplica primero a Arriba, segundo Izquierda y DErecha y el 3ro aplica a abajo
+                                        |Con 4 datos:Arriba, Derecha, Abajo, Izquierda*/
+                background-color: #1f5242;
+                color: white;
+            }
+
+            #atributos{
+                color: #c58018;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Clase 5: HTML 5 y CSS</h1>
+            <h2>Fundamentos e  Introducción</h2>
+            <h3>HTML 5:</h3>
+            <!-- <h4>Texto</h4>
+            <h5>Texto</h5>
+            <h6>Texto</h6> -->
+
+            <!-- PARRAFOS -->
+            <p class="contenido">HTML <strong>(Hyper Text Markup Lenguaje)</strong> es un <i>lenguaje</i> de marcado utilizado para definir la estructura de una página web mediante <strong>etiquetas</strong></p>
+            <p class="contenido">A diferencia de sus predecesores, HTML5 introduce nuevas etiquetas semánticas, soporta multimedia sin necesidad de plugins y ofrece mejoras en la interoperabilidad y el rendimiento en dispositivos móviles. Además, facilita la separación entre el contenido y la presentación de la página​.</p>
+            
+            <h3 id="atributos">Titulo en h3</h3>
+            <p>HTML5 introduce una serie de atributos que permiten añadir información y definir el comportamiento de los elementos en un documento. Estos atributos son aplicables a casi todos los elementos HTML, e incluyen ‘id’, ‘class’, ‘style’, ‘title’, ‘lang’ y ‘dir’.</p>
+
+
+            <!--ENLACES Y LISTAS-->
+            <a href="https://www.godaddy.com/resources/latam/diseno/html5-que-es">Ver más...</a>
+            <br>
+            <!-- <a href="./bienvenidos.html">Ir a mi página</a> -->
+            <br>
+
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+            </ul>
+
+            <ol>
+                <li>Número 1</li>
+                <li>Número 2</li>
+                <li>Número 3</li>
+
+            </ol>
+
+            <!--IMAGENES-->
+            <img src="./images/foto-jarm.png" alt="Esta es mi foto" width="100px">
+
+            <!-- <div>Este es un div</div><br><br><br> -->
+        </div>
+
+        <h4>Ejemplo de Formulario en HTML 5</h3>
+        <form action="" style="background-color: rgb(115, 233, 233);">
+            <label for="">Nombre:</label>
+            <input type="text" placeholder="Nombre completo"><br>
+
+            <label for="">Edad:</label>
+            <input type="number" placeholder="Edad"><br>
+
+            <label for="">Correo:</label>
+            <input type="email" placeholder="Correo"><br>
+
+            <label for="">Contraseña:</label>
+            <input type="password" placeholder="Contraseña"><br>
+
+            <label for="">Fecha de Nacimiento:</label>
+            <input type="date" placeholder="Fecha de Nacimiento"><br>
+
+            <button type="submit">Registrarse</button>
+        </form>
+        
+
+        <script src="./Clase5.js">
+            
+        </script>
+    </body>
+</html>

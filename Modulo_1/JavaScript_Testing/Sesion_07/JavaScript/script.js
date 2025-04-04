@@ -4,8 +4,9 @@ function obtenerUsuario(id){
 
         const usuarios = { 1: "Ana", 2: "Carlos", 3: "Maria"};
         
-        if(usuarios[id]) throw new Error("Usuario no encontrado");
-
+        if(!usuarios[id]) throw new Error("Usuario no encontrado");
+        console.log(usuarios);
+        
         return `Usuario encontrado: ${usuarios[id]}`;
     } catch (error) {
         console.error("Error: ", error.message);

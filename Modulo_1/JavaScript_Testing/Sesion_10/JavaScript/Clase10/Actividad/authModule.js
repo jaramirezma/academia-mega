@@ -9,11 +9,15 @@ const AuthModule = (function(){
 
     return {
         login(username, password){
-            if(username === userDB.username && password === userDB.password){
-                currentUser = UserSingleton.getIntance(username);
-                console.log(`Usuario Autenticado: ${currentUser.name}`);
+            if(currentUser){
+                console.log(`Ya posees una sesión activa de: ${currentUser.name}`);
             }else{
-                console.log("Credenciales Incorrectas");
+                if(username === userDB.username && password === userDB.password){
+                    currentUser = UserSingleton.getIntance(username);
+                    console.log(`Usuario Autenticado: ${currentUser.name}`);
+                }else{
+                    console.log("Credenciales Incorrectas");
+                }
             }
         },
         logout(){

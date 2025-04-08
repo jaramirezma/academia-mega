@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Clase 10</title>
+
+    <style>
+        /* Estilos por etiqueta */
+        body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #9face6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        }
+
+        h1 {
+        color: #ffffff;
+        margin-bottom: 30px;
+        }
+
+        input {
+        font-size: 16px;
+        padding: 10px;
+        margin: 10px 5px;
+        border: none;
+        border-radius: 8px;
+        width: 250px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 10px 10px 0 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        }
+
+        /* Estilos por clase */
+        .btn {
+        background-color: #4e54c8;
+        color: white;
+        }
+
+        .btn:hover {
+        background-color: #6c70e5;
+        }
+
+        .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+        /* Estilos por ID */
+        #username, #password {
+        background-color: #ffffff;
+        }
+
+        #username:focus,
+        #password:focus {
+        outline: 2px solid #4e54c8;
+        }
+
+        #loginBtn {
+        background-color: #43cea2;
+        }
+
+        #loginBtn:hover {
+        background-color: #34b28a;
+        }
+
+        #logoutBtn {
+        background-color: #f85032;
+        }
+
+        #logoutBtn:hover {
+        background-color: #d43d1a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login ficticio</h1>
+    
+    <br><br>
+
+    <div class="input-container">
+        <input type="text" id="username" placeholder="Usuario" />
+        <input type="password" id="password" placeholder="Contraseña" />
+    </div>
+    <br />
+    <button id="loginBtn" class="btn" onclick="login()">Iniciar sesión</button>
+    <button id="logoutBtn" class="btn" onclick="logout()">Cerrar sesión</button>
+    
+    
+    <script src="authModule.js"></script>
+    <script src="userSingleton.js"></script>
+    <script >
+        function login(){
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+
+            AuthModule.login(user, pass);
+            
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+        }
+
+        function logout(){
+            AuthModule.logout();
+        }
+    </script>
+</body>
+</html>

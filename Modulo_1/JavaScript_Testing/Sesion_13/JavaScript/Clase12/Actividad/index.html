@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Promedio </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Calculadora de Promedio</h1>
+
+    <form id="formularioNotas">
+        <label>Calificación de Matematicas:</label>
+        <input type="number" step="0.01" min="0" max="10" id="nota1" placeholder="Calificación 1" required>
+
+        <label>Calificación de Español :</label>
+        <input type="number" step="0.01" min="0" max="10" id="nota2" placeholder="Calificación 2" required>
+
+        <label>Calificación de Biología:</label>
+        <input type="number" step="0.01" min="0" max="10" id="nota3" placeholder="Calificación 3" required>
+
+        <label>Calificación de Ciencias Naturales:</label>
+        <input type="number" step="0.01" min="-10" max="10" id="nota4" placeholder="Calificación 4" required>
+
+        <label>Calificación de Civica y Ética:</label>
+        <input type="number" step="0.01" min="0" max="10" id="nota5" placeholder="Calificación 5" required>
+
+        <button type="submit">Calcular</button>
+
+        <div id="resultado"></div>
+        
+        <script src="./script.js"></script>
+    </form>
+</body>
+</html>

@@ -6,10 +6,15 @@ import { HomeComponent } from './Page/home/home.component';
 import { ErrorComponent } from './Page/error/error.component';
 import { TarjetaComponent } from './Components/tarjeta/tarjeta.component';
 import { ProductosInfoComponent } from './Page/productos-info/productos-info.component';
+import { ServicePageComponent } from './Page/service-page/service-page.component';
 
 export const routes: Routes = [
     {
         path: '',
+        component: ServicePageComponent
+    },
+    {
+        path: 'componentes',
         component: ProductosInfoComponent
     },
     {

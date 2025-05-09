@@ -1,4 +1,6 @@
-<p>usuarios works!</p>
+<h1>Directorio de Usuarios</h1>
 
-<app-user-list></app-user-list>
-<app-user-detail></app-user-detail>
+<div class="container">
+    <app-user-list (selectedUser)="user = $event"></app-user-list>
+<app-user-detail [user]="user"></app-user-detail>
+</div>

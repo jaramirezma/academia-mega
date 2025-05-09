@@ -9,5 +9,5 @@ import { UserDetailComponent } from '../../Components/user-detail/user-detail.co
   styleUrl: './usuarios.component.css'
 })
 export class UsuariosComponent {
-
+  user:any;
 }

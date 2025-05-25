@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_09\\ACADEMIA MEGA\\HelloWorld\\HelloWorld.csproj": {}
+    "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_10\\ACADEMIA MEGA\\HelloWorld\\HelloWorld.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_09\\ACADEMIA MEGA\\HelloWorld\\HelloWorld.csproj": {
+    "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_10\\ACADEMIA MEGA\\HelloWorld\\HelloWorld.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_09\\ACADEMIA MEGA\\HelloWorld\\HelloWorld.csproj",
+        "projectUniqueName": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_10\\ACADEMIA MEGA\\HelloWorld\\HelloWorld.csproj",
         "projectName": "HelloWorld",
-        "projectPath": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_09\\ACADEMIA MEGA\\HelloWorld\\HelloWorld.csproj",
+        "projectPath": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_10\\ACADEMIA MEGA\\HelloWorld\\HelloWorld.csproj",
         "packagesPath": "C:\\Users\\jaramirezma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_09\\ACADEMIA MEGA\\HelloWorld\\obj\\",
+        "outputPath": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_10\\ACADEMIA MEGA\\HelloWorld\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

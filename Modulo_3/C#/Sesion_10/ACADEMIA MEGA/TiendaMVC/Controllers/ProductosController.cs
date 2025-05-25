@@ -73,5 +73,32 @@ namespace TiendaMVC.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        // GET /Productos/Delete/5
+        public async Task<IActionResult> Delete(int id)
+        {
+            var product = await _api.GetByIdAsync(id);
+
+            if (product == null) return NotFound();
+            return View(product);
+        }
+
+        // POST /Productos/DeleteConfirmed/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var ok = await _api.DeleteAsync(id);
+            if (!ok)
+            {
+                // Opcional: podrías redirigir a una vista de error o mostrar mensaje
+                ModelState.AddModelError("", "Error al eliminar el producto");
+                var product = await _api.GetByIdAsync(id);
+                return View("Delete", product);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }

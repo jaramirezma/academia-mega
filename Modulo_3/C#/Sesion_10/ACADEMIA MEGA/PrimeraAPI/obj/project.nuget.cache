@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rrwkUFGdNFk=",
+  "dgSpecHash": "LMncXQC6UW8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_09\\ACADEMIA MEGA\\PrimeraAPI\\PrimeraAPI.csproj",
+  "projectFilePath": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_10\\ACADEMIA MEGA\\PrimeraAPI\\PrimeraAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jaramirezma\\.nuget\\packages\\asp.versioning.abstractions\\7.0.0\\asp.versioning.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\jaramirezma\\.nuget\\packages\\asp.versioning.http\\7.1.0\\asp.versioning.http.7.1.0.nupkg.sha512",

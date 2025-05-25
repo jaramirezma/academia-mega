@@ -3,6 +3,12 @@
     ViewData["Title"] = "Listado de Productos";
 }
 
+<h1>Productos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Nuevo Producto</a>
+</p>
+
 <table>
     <thead>
         <tr>
@@ -21,11 +27,11 @@
                 <td>@item.Nombre</td>
                 <td>@item.Precio.ToString("C")</td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@item.Id">Ver Detalle</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Ver Detalle</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">Editar Producto</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Eliminar Producto</a>
                 </td>
             </tr>
         }
-
-        <a asp-action="Create">Crear producto</a>
     </tbody>
 </table>

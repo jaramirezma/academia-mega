@@ -1,0 +1,6 @@
+# Ignorar appsettings.json de todos los proyectos
+**/appsettings.json
+
+# Ignorar carpetas bin y obj de todos los proyectos
+**/bin/
+**/obj/

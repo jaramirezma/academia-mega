@@ -46,7 +46,7 @@ jobs:
 
       # 6. Crear Artifact
       - name: Crear Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: publish
           path: publish

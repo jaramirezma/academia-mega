@@ -7,5 +7,5 @@ public record SensorSnapshot(
     float? CpuLoad,
     float? GpuLoad,
     int MemoryUseMb,
-    int FamRpm
+    int FanRpm
 );

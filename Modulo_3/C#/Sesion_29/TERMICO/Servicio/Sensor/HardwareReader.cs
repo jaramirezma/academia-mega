@@ -2,14 +2,13 @@ using LibreHardwareMonitor.Hardware;
 
 namespace Servicio.Sensor;
 
-/// <summary> Wrapper  de LibreHardwareMonitor para leer los sensores </summary>
+/// <summary> Wrapper de LibreHardwareMonitor para leer los sensores </summary>
 public sealed class HardwareReader : IVisitor
 {
     private readonly Computer _computer;
 
     // Las últimas lecturas
     private float? _cpuTemp, _gpuTemp, _cpuLoad, _gpuLoad;
-
     private int _memUsed, _fan;
 
     public HardwareReader()
@@ -20,9 +19,8 @@ public sealed class HardwareReader : IVisitor
             IsGpuEnabled = true,
             IsMemoryEnabled = true,
             IsMotherboardEnabled = true,
-            IsControllerEnabled = true
+            IsControllerEnabled = true,
         };
-
         _computer.Open();
     }
 
@@ -31,13 +29,22 @@ public sealed class HardwareReader : IVisitor
         _computer.Accept(this);
         return new SensorSnapshot(
             Timestamp: DateTime.Now,
-            _cpuTemp: _cpuTemp,
-            _gpuTemp: _gpuTemp,
-            _cpuLoad: _cpuLoad,
-            _gpuLoad: _gpuLoad,
-            MemoryUsebMb: _memUsed,
+            CpuTemp: _cpuTemp,
+            CpuLoad: _cpuLoad,
+            GpuTemp: _gpuTemp,
+            GpuLoad: _gpuLoad,
+            MemoryUseMb: _memUsed,
             FanRpm: _fan
         );
+    }
+
+    public void VisitComputer(IComputer computer)
+    {
+        foreach (var hw in computer.Hardware)
+        {
+            hw.Update();
+            hw.Accept(this);
+        }   
     }
 
     public void VisitHardware(IHardware hardware)
@@ -53,7 +60,7 @@ public sealed class HardwareReader : IVisitor
             case SensorType.Temperature:
                 if (sensor.Name.Contains("CPU", StringComparison.OrdinalIgnoreCase))
                     _cpuTemp = sensor.Value;
-                if (sensor.Name.Contains("GPU", StringComparison.OrdinalIgnoreCase))
+                if (sensor.Name.Contains("GPI", StringComparison.OrdinalIgnoreCase))
                     _gpuTemp = sensor.Value;
                 break;
 
@@ -75,15 +82,6 @@ public sealed class HardwareReader : IVisitor
         }
     }
 
-    public void VisitComputer(IComputer computer)
-    {
-        foreach (var hw in computer.Hardware)
-        {
-            hw.Update();
-            hw.Accept(this);
-        }
-    }
-    
     public void VisitParameter(IParameter parameter)
     {
         throw new NotImplementedException();

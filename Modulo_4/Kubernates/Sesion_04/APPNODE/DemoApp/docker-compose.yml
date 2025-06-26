@@ -1,0 +1,22 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings_DefaultConnection=Server=(localdb)\\MSSQLLocalDB;Database=Starbucks;User Id=jaramirezmaCurso; Password=Nayarit.0106*
+  db:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Nayarit.0106*
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssqldata:/var/opt/mssql
+
+volumes:
+  mssqldata:

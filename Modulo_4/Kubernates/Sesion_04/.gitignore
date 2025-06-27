@@ -5,3 +5,4 @@ APPNODE/DemoApp/bin
 APPNODE/DemoApp/obj
 
 APPNODE/DemoApp/aspnet-compose/docker-compose.yml
+APPNODE/DemoApp/docker-compose.yml

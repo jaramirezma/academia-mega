@@ -1,0 +1,15 @@
+APPNODE/appnode_clase2/node_modules
+
+APPNODE/DemoApp/appsettings.json
+APPNODE/DemoApp/bin
+APPNODE/DemoApp/obj
+
+APPNODE/DemoApp/aspnet-compose/docker-compose.yml
+APPNODE/DemoApp/docker-compose.yml
+
+APPNODE/aplicacion2/backend/node_modules
+APPNODE/aplicacion2/backend/src/.env
+
+APPNODE/example-voting-app/.env
+
+APPNODE/example-voting-app/dev.env
